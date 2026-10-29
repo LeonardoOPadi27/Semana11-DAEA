@@ -1,0 +1,2 @@
+@model Eventos.Web.Models.Evento
+@{ViewData["Title"]="Detalle";}<div class="page-head"><div><p class="eyebrow">@Model.Categoria?.Nombre</p><h1>@Model.Titulo</h1></div><a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id">Editar</a></div><div class="card-clean p-4"><p><strong>@Model.Fecha.ToString("dddd dd MMMM, HH:mm")</strong> · @Model.Lugar</p><p>@Model.Modalidad · S/ @Model.Precio.ToString("N2") · Aforo @Model.Aforo</p><a class="text-danger" asp-action="Delete" asp-route-id="@Model.Id">Dar de baja</a></div>

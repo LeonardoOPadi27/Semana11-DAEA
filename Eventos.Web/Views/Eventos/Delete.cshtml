@@ -1,0 +1,2 @@
+@model Eventos.Web.Models.Evento
+@{ViewData["Title"]="Dar de baja";}<div class="card-clean p-4"><h1>Dar de baja evento</h1><p>El evento dejará de estar disponible sin eliminar su historial.</p><form asp-action="Delete"><input type="hidden" asp-for="Id"/><button class="btn btn-danger">Confirmar baja</button> <a class="btn btn-light" asp-action="Details" asp-route-id="@Model.Id">Cancelar</a></form></div>
